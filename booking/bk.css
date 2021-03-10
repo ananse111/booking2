@@ -1,0 +1,22 @@
+body{
+    background: url('images/images/outdoor-1.jpg');
+}
+.bton {
+    position: relative;
+    padding: 5px 30px;
+    background-color: gold;
+}
+.bton:hover{
+    background-color: goldenrod;
+}
+#check{
+    background-color: white;
+    width: 480px;
+    height: 200px;
+    text-align: center;
+    margin: 10px;
+    padding-top: 10px;
+}
+.lab{
+    margin: 5px;
+}

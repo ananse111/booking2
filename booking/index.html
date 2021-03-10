@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bk.css">
+</head>
+
+<body>
+    <div class="book1">
+        <div class="imag"><img src="images/images/hotelfront.jpg" alt="" id="foto1" 
+                style="max-width: 100%;"></div>
+        <button class="bton" onclick="book()" id="btn">BOOK</button>
+
+        <div id="check">
+           <div class="lab"> <label class="lab" for=""> Name <input id="name" placeholder="Enter your name" type="text"></label></div>
+            <br>
+           <div class="lab"> <label class="lab" for=""> Check in <input type="date" id="ci"></label></div>
+            <br>
+
+            <div class="lab"><label class="lab" for=""><span> Check out</span> <input type="date" id="co"></label></div>
+            <br>
+            <button onclick="confirme()" id="reserve"> CONFIRM</button>
+
+        </div>
+        
+        <div id="room" class="room">
+
+            <div class="ima"></div>
+
+            <h3>EXECUTIVE SUITE</h3>
+            King size bed, breakfast in bed, free massage <p>$ 600</p>
+            <div id="btn0" class="btn0"><button onclick="book0()" class="but">BOOK</button></div>
+
+        </div>
+        
+            <div id="room1" class="room">
+
+                <div class="ima"></div>
+
+                <h3>EXECUTIVE SUITE</h3>
+                King size bed, breakfast in bed, free massage <p>$ 600</p>
+                <div class="btn1"><button class="but">BOOK</button></div>
+
+            </div>
+            <div id="room2" class="room">
+
+                <div class="ima"></div>
+
+                <h3>EXECUTIVE SUITE</h3>
+                King size bed, breakfast in bed, free massage <p>$ 600</p>
+                <div class="btn2"><button class="but">BOOK</button></div>
+
+            </div>
+            <div id="dis" style="position: absolute; top: 7px;"> <button onclick="bak()" id="back">back</button> </div>
+            <div id="disp"></div>
+        </div>
+        
+    </div>
+
+
+    <script>
+        var body = document.getElementsByTagName('body')
+      /*  if (/android|webOS|iPhone|iPad/i.test(navigator.userAgent)){
+            
+        }
+        else{
+            body[0].innerHTML =''
+        }*/
+       
+        var disp = document.getElementById('disp')
+        var back = document.getElementById('back')
+        var dis = document.getElementById('dis')
+        var name = document.getElementById('name')
+        var room = document.getElementById('room')
+        var room1 = document.getElementById('room1')
+        var room2 = document.getElementById('room2')
+        var btn = document.getElementById('btn')
+        var btn0 = document.getElementById('btn0')
+        var btn1 = document.getElementById('btn1')
+        var btn2 = document.getElementById('btn2')
+        var checkin = document.getElementById('check')
+        checkin.style.display = 'none'
+        room.style.display = 'none'
+        room1.style.display = 'none'
+        room2.style.display = 'none'
+        back.style.display ='none'
+        var co = document.getElementById('co')
+        var ci = document.getElementById('ci')
+        
+        
+        function book() {
+
+            btn.style.display = 'none'
+            checkin.style.display = ''
+            back.style.display = 'none'
+            disp.style.display = 'none'
+        }
+
+        function confirme() {
+            var reserve = document.getElementById('reserve')
+            reserve.style.display = 'none'
+            checkin.style.display = 'none'
+            room.style.display = ''
+            room1.style.display = ''
+            room2.style.display = ''
+            btn.style.display = 'none'
+            back.style.display = ''
+            co = co.value
+            ci = ci.value
+            const date1  = new Date (co)
+            const date2  = new Date (ci)
+            const aday = 24*60*60*1000
+            var diff = Math.round(Math.abs((date1 -date2)/aday))
+
+            return diff;
+           
+            
+        }
+        function book0() {
+            
+            disp.innerHTML = document.getElementById('name').value
+
+            room.style.display = 'none'
+            room1.style.display = 'none'
+            room2.style.display = 'none'
+            disp.style.display = ''
+            
+            diff.style.display = ''
+
+            
+        } 
+        
+        function book0() {
+            disp.innerHTML = document.getElementById('name').value
+            
+            room.style.display = 'none'
+            room1.style.display = 'none'
+            room2.style.display = 'none'
+        }
+        function book0() {
+            disp.innerHTML = document.getElementById('name').value
+
+            room.style.display = 'none'
+            room1.style.display = 'none'
+            room2.style.display = 'none'
+            disp.style.display = ''
+        }
+        function bak(){
+            checkin.style.display = ''
+            back.style.display = 'none'
+            room.style.display = 'none'
+            reserve.style.display = ''
+
+            
+
+          
+        }
+
+    </script>
+</body>
+
+</html>
